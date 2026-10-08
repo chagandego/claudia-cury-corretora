@@ -9,23 +9,15 @@ Abra o `index.html` no navegador, ou sirva a pasta com qualquer servidor estáti
 
 ## Publicação (Vercel)
 
-O projeto está ligado na Vercel, mas **travado para não ir ao ar**. São duas travas no `vercel.json`:
+O projeto está publicado na Vercel em produção: https://claudia-cury-corretora.vercel.app
+Cada commit na `main` vai direto para o ar.
 
-- `"git": { "deploymentEnabled": false }`: push no GitHub não dispara deploy;
-- `"ignoreCommand": "exit 0"`: qualquer build que comece é cancelado.
+Por enquanto o site está **escondido do Google**: o `vercel.json` manda o cabeçalho
+`X-Robots-Tag: noindex, nofollow`. Quem tem o link consegue abrir, mas o site não aparece nas buscas.
 
-Para colocar no ar, edite o `vercel.json` (dá para fazer pelo próprio GitHub) e deixe só isto:
+Para liberar de vez, quando a Cláudia aprovar, apague o bloco `"headers"` do `vercel.json` e faça commit.
 
-```json
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
-}
-```
-
-Depois do commit, abra o projeto na Vercel e clique em **Deploy** (ou em **Redeploy** no último deploy). A partir daí, cada commit na `main` vai direto para produção.
-
-## Antes de publicar
+## Antes de liberar de vez
 
 - [ ] Adicionar o número do CRECI no rodapé (obrigatório em anúncios de imóveis). Já tem uma linha comentada no `index.html` pronta para isso.
 - [ ] Confirmar com a Cláudia os bairros atendidos e os serviços (venda, compra, locação, avaliação).
