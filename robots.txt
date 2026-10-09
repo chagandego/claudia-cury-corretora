@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claudia-cury-corretora.vercel.app/sitemap.xml
