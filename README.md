@@ -12,13 +12,12 @@ Abra o `index.html` no navegador, ou sirva a pasta com qualquer servidor estáti
 O projeto está publicado na Vercel em produção: https://claudia-cury-corretora.vercel.app
 Cada commit na `main` vai direto para o ar.
 
-O site está **liberado para o Google**, com `robots.txt` e `sitemap.xml`. Para esconder de novo, volte a pôr no `vercel.json`:
+Desde 20/10/2026 o site está de novo **escondido do Google**: o `vercel.json` manda o cabeçalho
+`X-Robots-Tag: noindex, nofollow`. Quem tem o link consegue abrir, mas o site não aparece nas buscas.
+O `robots.txt` continua com `Allow: /` de propósito: o Google precisa visitar a página para ver o
+noindex e tirá-la dos resultados.
 
-```json
-"headers": [
-  { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
-]
-```
+Para liberar de novo, apague o bloco `"headers"` do `vercel.json` e faça commit.
 
 ## Pendências
 
